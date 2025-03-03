@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+      overflow-x: hidden;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    /* Entrance animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeIn 1.5s ease-out;
+    }
+    nav a {
+      color: #ecf0f1;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    nav a:hover {
+      background: #2c3e50;
+      transform: translateY(-2px);
+    }
+    section {
+      padding: 4rem 1rem;
+      animation: fadeIn 1s ease-out;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #2c3e50;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+    /* Projects Grid */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .project-card h3 {
+      margin-bottom: 0.75rem;
+      font-family: 'Montserrat', sans-serif;
+      color: #2c3e50;
+    }
+    .project-card p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .project-card a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .project-card a:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+    /* Open Source Contributions Section */
+    .opensource {
+      background: #e8f4f8;
+      padding: 3rem 1rem;
+      border-top: 4px solid #3498db;
+      animation: fadeIn 1s ease-out;
+    }
+    .opensource h2 {
+      color: #2980b9;
+    }
+    .opensource ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .opensource li {
+      background: #fff;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .opensource li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      animation: fadeIn 1s ease-out;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      header p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/150x150.png?text=Logo" alt="Your Logo" style="border-radius:50%; margin-bottom:1rem;">
+    <h1>Your Name</h1>
+    <p>Software Engineer | Open Source Contributor | Innovator</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#opensource">Open Source</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m [Your Name], a passionate software engineer with extensive experience in building scalable applications and contributing to open source projects. I thrive on solving complex problems and sharing my knowledge with the community. My portfolio showcases a blend of technical expertise, creative design, and a commitment to open innovation.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p>An innovative web application built with modern technologies that deliver a seamless user experience.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p>A microservices-based solution designed to improve performance and scalability in cloud environments.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Project Three</h3>
+          <p>A mobile app focused on delivering intuitive and efficient user interactions with real-time data.</p>
+          <a href="#">View Project</a>
+        </div>
+        <!-- Additional project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <section id="opensource" class="opensource">
+    <div class="container">
+      <h2>Open Source Contributions</h2>
+      <p>
+        I am an active open source contributor, committed to improving the developer community. My contributions span various projects on GitHub and have helped shape solutions in areas like web development, automation, and infrastructure.
+      </p>
+      <ul>
+        <li>Contributed to [https://github.com/GoogleCloudPlatform/khi]: Enhanced functionality by adding linting featire for all languages</li>
+        <li>Maintained [Another Project]: Managed releases and improved documentation.</li>
+        <li>Active participant in open source communities: Regularly review and merge PRs on several repositories.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you're interested in collaborating or want to learn more about my work, feel free to get in touch!</p>
+      <ul style="list-style: none; text-align: center;">
+        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+      </ul>
+      <button style="padding: 0.75rem 1.5rem; border: none; background: #3498db; color: #fff; border-radius: 4px; cursor: pointer; transition: background 0.3s ease, transform 0.3s ease;" 
+              onmouseover="this.style.background='#2980b9'; this.style.transform='scale(1.05)';" 
+              onmouseout="this.style.background='#3498db'; this.style.transform='scale(1)';">
+        Get in Touch
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
