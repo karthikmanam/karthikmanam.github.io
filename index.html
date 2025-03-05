@@ -526,6 +526,36 @@
         padding: 0.6rem;
       }
     }
+
+    .cv-section {
+      margin: 2rem 0;
+    }
+
+    .cv-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2rem;
+      background: white;
+      color: var(--primary);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .cv-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      background: var(--primary);
+      color: white;
+    }
+
+    .cv-button i {
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 <body>
@@ -549,6 +579,12 @@
         <div class="hero-description">
           <p>I am a DevOps & Cloud Security Engineer with extensive experience in AWS, Azure, Kubernetes, Terraform, GitOps, and CI/CD automation.</p>
           <p>Currently pursuing a PhD in Cloud Computing (AI/ML) at University of the Cumberlands, focusing on Gender Biases in AI/ML Team Dynamics.</p>
+        </div>
+        <div class="cv-section">
+            <a href="docs/manam.pdf" download class="cv-button">
+                <i class="fas fa-download"></i>
+                Download CV
+            </a>
         </div>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/karthik-m-379a49184/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
