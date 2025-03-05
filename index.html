@@ -163,12 +163,13 @@
 
     .project-content {
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project-content h3 {
-      color: var(--primary);
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
     }
 
     .project-content p {
@@ -323,6 +324,21 @@
       color: var(--gray);
       font-size: 1.1rem;
     }
+
+    /* Add to your existing styles */
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -375,7 +391,12 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Kubernetes</h3>
+                    <div class="project-header">
+                        <img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png" 
+                             alt="Kubernetes Logo" 
+                             class="project-icon">
+                        <h3>Kubernetes</h3>
+                    </div>
                     <p>Contributing to the world's leading container orchestration platform. Working on improving core functionality and documentation.</p>
                     <div class="project-links">
                         <a href="https://github.com/kubernetes/kubernetes/pulls?q=author%3Akarthikmanam" target="_blank" rel="noopener noreferrer">
@@ -387,7 +408,12 @@
 
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Kyverno</h3>
+                    <div class="project-header">
+                        <img src="https://github.com/kyverno/kyverno/raw/main/img/kyverno.png" 
+                             alt="Kyverno Logo" 
+                             class="project-icon">
+                        <h3>Kyverno</h3>
+                    </div>
                     <p>Contributing to Kubernetes-native policy management. Helping improve policy enforcement and validation capabilities.</p>
                     <div class="project-links">
                         <a href="https://github.com/kyverno/kyverno/pulls?q=author%3Akarthikmanam" target="_blank" rel="noopener noreferrer">
@@ -399,7 +425,12 @@
 
             <div class="project-card">
                 <div class="project-content">
-                    <h3>KHI (Kubernetes Health Inspector)</h3>
+                    <div class="project-header">
+                        <img src="https://raw.githubusercontent.com/GoogleCloudPlatform/khi/main/logo/khi-logo.png" 
+                             alt="KHI Logo" 
+                             class="project-icon">
+                        <h3>KHI (Kubernetes Health Inspector)</h3>
+                    </div>
                     <p>Enhanced functionality by adding linting feature for all languages. Improved code quality and maintainability.</p>
                     <div class="project-links">
                         <a href="https://github.com/GoogleCloudPlatform/khi/pulls?q=author%3Akarthikmanam" target="_blank" rel="noopener noreferrer">
