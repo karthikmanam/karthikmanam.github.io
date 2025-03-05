@@ -145,11 +145,14 @@
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.1);
     }
 
     .project-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-color: var(--primary);
     }
 
     .project-image {
@@ -159,7 +162,31 @@
     }
 
     .project-content {
-      padding: 1.5rem;
+      padding: 2rem;
+    }
+
+    .project-content h3 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-content p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .project-links a {
+      background: var(--light);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .project-links a:hover {
+      background: var(--primary);
+      color: white;
     }
 
     /* Contact Section */
@@ -280,32 +307,21 @@
     }
 
     /* Add these styles in your existing <style> section */
-    .project-content h3 {
-      color: var(--dark);
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-
     .project-links {
       margin-top: 1rem;
     }
 
-    .project-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .project-links a:hover {
-      color: var(--secondary);
-    }
-
     .project-links i {
       font-size: 1.2rem;
+    }
+
+    /* Add these styles to your existing <style> section */
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 1rem auto 2rem;
+      color: var(--gray);
+      font-size: 1.1rem;
     }
   </style>
 </head>
@@ -354,22 +370,45 @@
 
   <section id="opensource">
     <div class="container">
-      <h2>Open Source Contributions</h2>
-      <div class="projects-grid">
-        <!-- Example contribution card structure -->
-        <div class="project-card">
-          <div class="project-content">
-            <h3>Kubernetes</h3>
-            <p>Contributed to container orchestration platform...</p>
-            <div class="project-links">
-              <a href="https://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> View Contributions
-              </a>
+        <h2>Open Source Contributions</h2>
+        <p class="section-intro">Active CNCF (Cloud Native Computing Foundation) Contributor with significant contributions to key cloud-native projects.</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Kubernetes</h3>
+                    <p>Contributing to the world's leading container orchestration platform. Working on improving core functionality and documentation.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Contributions
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Kyverno</h3>
+                    <p>Contributing to Kubernetes-native policy management. Helping improve policy enforcement and validation capabilities.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/kyverno/kyverno" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Contributions
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>KHI (Kubernetes Health Inspector)</h3>
+                    <p>Enhanced functionality by adding linting feature for all languages. Improved code quality and maintainability.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/GoogleCloudPlatform/khi" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Contributions
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Add more contribution cards as needed -->
-      </div>
     </div>
   </section>
 
