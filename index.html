@@ -239,20 +239,44 @@
     /* Add this to your existing styles */
     .social-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
       margin-bottom: 2rem;
+      align-items: center;
     }
 
     .social-links a {
       color: white;
-      font-size: 1.5rem;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
       opacity: 0.9;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .social-links a:hover {
       transform: translateY(-3px);
       opacity: 1;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Add specific hover colors for each platform */
+    .social-links a:hover .fa-linkedin {
+      color: #0077b5;
+    }
+
+    .social-links a:hover .fa-twitter {
+      color: #1da1f2;
+    }
+
+    .social-links a:hover .fa-envelope {
+      color: #ea4335;
     }
   </style>
 </head>
@@ -274,6 +298,12 @@
         <div class="social-links">
           <a href="https://www.linkedin.com/in/karthik-m-379a49184/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
             <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/YourTwitterHandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:your.email@example.com" aria-label="Email Me">
+            <i class="fas fa-envelope"></i>
           </a>
         </div>
         <a href="#contact" class="btn">Get in Touch</a>
