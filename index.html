@@ -381,6 +381,78 @@
       margin-bottom: 1.5rem;
       line-height: 1.2;
     }
+
+    /* Add to your existing styles */
+    .about-grid {
+      margin-top: 2rem;
+    }
+
+    .about-intro {
+      font-size: 1.2rem;
+      color: var(--gray);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+
+    .expertise-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .expertise-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-color: var(--primary);
+    }
+
+    .expertise-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .expertise-card h3 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .expertise-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .expertise-card ul li {
+      margin-bottom: 0.5rem;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .expertise-card ul li::before {
+      content: "▹";
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .expertise-areas {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -431,8 +503,64 @@
 
   <section id="about">
     <div class="container">
-      <h2>About Me</h2>
-      <p>Experienced DevOps Engineer with expertise in cloud architecture and automation...</p>
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-content">
+                <p class="about-intro">
+                    A passionate DevOps Engineer and CNCF Contributor with a unique blend of technical expertise and academic research.
+                </p>
+                
+                <div class="expertise-areas">
+                    <div class="expertise-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & DevOps</h3>
+                        <ul>
+                            <li>AWS & Azure Cloud Architecture</li>
+                            <li>Kubernetes & Container Orchestration</li>
+                            <li>Infrastructure as Code (Terraform)</li>
+                            <li>CI/CD Pipeline Automation</li>
+                            <li>GitOps & DevSecOps Practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security & Compliance</h3>
+                        <ul>
+                            <li>Cloud Security Architecture</li>
+                            <li>Policy as Code (Kyverno)</li>
+                            <li>Security Automation</li>
+                            <li>Compliance Management</li>
+                            <li>Zero Trust Implementation</li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Open Source</h3>
+                        <ul>
+                            <li>Active CNCF Contributor</li>
+                            <li>Kubernetes Documentation</li>
+                            <li>Kyverno Policy Development</li>
+                            <li>Cloud-Native Tools</li>
+                            <li>Community Engagement</li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Research & Academia</h3>
+                        <ul>
+                            <li>PhD Research in Cloud Computing</li>
+                            <li>AI/ML in Cloud Operations</li>
+                            <li>Gender Bias in Tech Teams</li>
+                            <li>Technical Publications</li>
+                            <li>Industry-Academia Bridge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </section>
 
