@@ -656,6 +656,156 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Add these styles to the existing style section */
+    .blogs-section {
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+      border-color: var(--primary);
+    }
+
+    .blog-image-container {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-image {
+      transform: scale(1.05);
+    }
+
+    .blog-category {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      z-index: 1;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .blog-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .blog-date {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .blog-title {
+      font-size: 1.6rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    .blog-excerpt {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .blog-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      background: rgba(37, 99, 235, 0.1);
+      transition: all 0.3s ease;
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    .blog-link:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .blog-metrics {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      color: var(--gray);
+      font-size: 0.85rem;
+    }
+
+    .blog-metric {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: 1.5rem;
+      left: -3.5rem;
+      background: #ff6b6b;
+      color: white;
+      padding: 0.5rem 4rem;
+      transform: rotate(-45deg);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -666,6 +816,7 @@
       <a href="#skills">Skills</a>
       <a href="#opensource">Opensource</a>
       <a href="#certificates">Certifications</a>
+      <a href="#blogs">Blogs</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </div>
@@ -715,7 +866,7 @@
 
   <section id="about">
     <div class="container">
-        <h2>About Me</h2>
+      <h2>About Me</h2>
         <div class="about-grid">
             <div class="about-content">
                 <p class="about-intro">
@@ -968,7 +1119,7 @@
             </div>
 
             <!-- Add new project card for Helm -->
-            <div class="project-card">
+        <div class="project-card">
                 <div class="project-content">
                     <div class="project-header">
                         <img src="https://helm.sh/img/helm.svg" alt="Helm Logo" class="project-icon">
@@ -981,13 +1132,15 @@
                         </a>
                     </div>
                 </div>
-            </div>
+        </div>
 
             <!-- Add Chainsaw project card -->
-            <div class="project-card">
+        <div class="project-card">
                 <div class="project-content">
                     <div class="project-header">
-                        <img src="https://github.com/kyverno/website/raw/main/static/images/chainsaw-icon.svg" alt="Chainsaw Logo" class="project-icon">
+                        <div class="project-icon" style="display: flex; justify-content: center; align-items: center; background-color: #3F51B5; color: white;">
+                            <i class="fas fa-tools fa-2x"></i>
+                        </div>
                         <h3>Kyverno Chainsaw</h3>
                     </div>
                     <p>Contributing to Chainsaw, a declarative Kubernetes e2e testing tool. Implementing new features, improving documentation, and enhancing test coverage.</p>
@@ -998,7 +1151,49 @@
                     </div>
                 </div>
             </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blogs" class="blogs-section">
+    <div class="container">
+      <h2>Technical Blogs</h2>
+      <p class="section-intro">Sharing knowledge and insights on cloud-native technologies, DevOps practices, and Kubernetes ecosystems</p>
+      
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="featured-tag">Featured</div>
+          <div class="blog-image-container" style="display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #3182ce, #2b6cb0);">
+            <i class="fas fa-cubes fa-5x" style="color: white; opacity: 0.8;"></i>
+            <div class="blog-category">Kubernetes</div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">
+              <i class="far fa-calendar-alt"></i>
+              March 18, 2025
+            </div>
+            <h3 class="blog-title">Cost Optimization and Reliability in Kubernetes: Enhanced Resource Management with Kyverno</h3>
+            <p class="blog-excerpt">
+              This research examines two novel implementations of Kubernetes admission control policies using Kyverno: schedule-based resource quotas and StatefulSet update strategy enforcement. Both address critical challenges in modern cloud-native environments: cost optimization and application reliability during updates.
+            </p>
+            <a href="https://dev.to/karthikmanam/cost-optimization-and-reliability-in-kubernetes-enhanced-resource-management-with-kyverno-24hf" target="_blank" rel="noopener noreferrer" class="blog-link">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="blog-metrics">
+              <div class="blog-metric">
+                <i class="fas fa-book-reader"></i>
+                8 min read
+              </div>
+              <div class="blog-metric">
+                <i class="fas fa-tags"></i>
+                Kyverno, Cost Optimization
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <!-- You can add more blog cards here in the future -->
+      </div>
     </div>
   </section>
 
